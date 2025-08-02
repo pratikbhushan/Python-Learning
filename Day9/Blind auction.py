@@ -10,7 +10,7 @@ while program_continue:
     name = input("What is your name?: ")
     bid_amount = int(input("What is your Bid?: ₹"))
     bid_memory[name] = bid_amount
-    user_choice = input("Are there any other bidders? Type 'Yes' or 'No'.").lower()
+    user_choice = input("Are there any other bidders? Type 'Yes' or 'No'. ").lower()
     if user_choice == "no":
         program_continue = False
         winner = max(bid_memory, key=bid_memory.get)
