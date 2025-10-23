@@ -1,6 +1,5 @@
 PLACEHOLDER = "[name]"
 
-#
 with open(r"C:\Users\vishw\OneDrive\Desktop\Python learning\Projects\Day24\Mail Merge Project Start\Input\Names\invited_names.txt") as names_file:
     names = names_file.readlines()
    
