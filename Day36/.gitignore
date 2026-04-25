@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.py[cod]
+.vscode/
+news_data.json
+stock_data.json
