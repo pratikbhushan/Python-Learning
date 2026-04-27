@@ -4,48 +4,6 @@ This script is a habit tracker built using the Pixela API, which allows users to
 
 ---
 
-##  Architecture Overview
-
-The system follows a decoupled, Object-Oriented (OOP) architecture. Here is how the components interact:
-
-```text
-Flight Price Tracker Architecture
-├── 1. Database Layer (Google Sheets via Sheety API)
-│   ├── Read: Fetches Watchlist (Destinations & Target Prices)
-│   └── Write: Updates missing IATA codes & new "Record Low" prices
-│
-├── 2. Core Execution Engine (Python)
-│   ├── main.py (Orchestrator: loops through destinations and logic)
-│   ├── data_manager.py (Handles all RESTful HTTP requests to Sheety)
-│   ├── flight_search.py (Connects to Amadeus/SerpAPI/Kiwi for live data)
-│   └── flight_data.py (Data Transfer Object: parses and structures JSON)
-│
-└── 3. Alerting Layer (Telegram API)
-    └── notification_manager.py (Formats and pushes mobile alerts)
-
-
-Google Sheets (Database)          Telegram / SMS
-          ^                               |
-          | REST (Sheety API)             | Outbound Alert
-          v                               v
-    ┌──────────────────────────────────────────────┐
-    |                Core Engine                   |
-    |  ┌────────────┐  ┌────────────┐  ┌─────────┐ |
-    |  | DataManager|  |FlightSearch|  | Notify  | |
-    |  | (CRUD)     |  | (API)      |  | Manager | |
-    |  └─────┬──────┘  └─────┬──────┘  └────┬────┘ |
-    |        |               |              |      |
-    |  ┌─────v───────────────v──────────────v────┐ |
-    |  |            Execution Layer              | |
-    |  |      IATA Fetching | Price Parsing      | |
-    |  └─────────────────────┬───────────────────┘ |
-    └────────────────────────|─────────────────────┘
-                             v
-                    Flight Search API
-                         (SerpAPI)
-```
----
-
 ## ✨ Key Features
 
 * **User Authentication:** Uses custom headers (X-USER-TOKEN) for secure API interaction.
