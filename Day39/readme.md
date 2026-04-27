@@ -8,7 +8,7 @@ An automated flight intelligence engine that monitors price arbitrage for domest
 
 The system follows a decoupled, Object-Oriented (OOP) architecture. Here is how the components interact:
 
-
+```text
 Flight Price Tracker Architecture
 ├── 1. Database Layer (Google Sheets via Sheety API)
 │   ├── Read: Fetches Watchlist (Destinations & Target Prices)
@@ -43,7 +43,7 @@ Google Sheets (Database)          Telegram / SMS
                              v
                     Flight Search API
                          (SerpAPI)
-
+```
 ---
 
 ## ✨ Key Features
@@ -81,8 +81,9 @@ Google Sheets (Database)          Telegram / SMS
 ├── .gitignore               # Prevents secrets and cache leakage to GitHub
 └── requirements.txt         # Project dependencies
 
-
+```
 ## 🚀 Getting Started
+
 
 Follow these step-by-step instructions to set up the tracker on your local machine.
 
@@ -99,7 +100,7 @@ git clone [https://github.com/yourusername/flight-price-tracker.git](https://git
 cd flight-price-tracker
 pip install -r requirements.txt
 
-
+```
 ### 3. Configuration
 Create a .env file in the root directory to securely store your API keys. (Ensure .env is listed in your .gitignore file so it doesn't get uploaded to GitHub).
 
@@ -115,7 +116,7 @@ Run the orchestrator script to start tracking:
 ```bash
 python main.py
 
-
+```
 ## ⚙️ How It Works
 
 The system operates in a continuous, automated loop broken down into five distinct phases:
