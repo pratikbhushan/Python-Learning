@@ -29,7 +29,7 @@ Google Sheets (Database)          Telegram / SMS
           | REST (Sheety API)             | Outbound Alert
           v                               v
     ┌──────────────────────────────────────────────┐
-    |                Vayu Core Engine              |
+    |                Core Engine                   |
     |  ┌────────────┐  ┌────────────┐  ┌─────────┐ |
     |  | DataManager|  |FlightSearch|  | Notify  | |
     |  | (CRUD)     |  | (API)      |  | Manager | |
@@ -96,7 +96,7 @@ Follow these step-by-step instructions to set up the tracker on your local machi
 Clone the repository and install the required dependencies:
 
 ```bash
-git clone [https://github.com/yourusername/flight-price-tracker.git](https://github.com/yourusername/flight-price-tracker.git)
+git clone https://github.com/pratikbhushan/flight-price-tracker.git
 cd flight-price-tracker
 pip install -r requirements.txt
 
@@ -104,7 +104,7 @@ pip install -r requirements.txt
 ### 3. Configuration
 Create a .env file in the root directory to securely store your API keys. (Ensure .env is listed in your .gitignore file so it doesn't get uploaded to GitHub).
 
-SHEETY_ENDPOINT=[https://api.sheety.co/your_id/project/prices](https://api.sheety.co/your_id/project/prices)
+SHEETY_ENDPOINT=https://api.sheety.co/your_id/project/prices
 SHEETY_TOKEN=your_secret_token
 FLIGHT_API_KEY=your_api_key
 TELEGRAM_BOT_TOKEN=your_bot_token
